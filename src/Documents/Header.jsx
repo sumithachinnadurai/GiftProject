@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <AppBar sx={{ background: "#063970" }}>
+      <AppBar sx={{ background: "#F5F5F5" }}>
         <Toolbar>
           <img src="/logo192.png" alt="" width="50px" />
           {isMatch ? (
@@ -54,10 +54,18 @@ const Header = () => {
                 value={value}
                 onChange={handleChange}
               >
-                <Tab label="Products" />
-                <Tab label="Services" />
-                <Tab label="About Us" />
-                <Tab label="Contact" />
+                <Link to="/products">
+                  <Tab label="Products" />
+                </Link>
+                <Link to="/services">
+                  <Tab label="Services" />
+                </Link>
+                <Link to="/aboutus">
+                  <Tab label="About Us" />
+                </Link>
+                <Link to="/contact">
+                  <Tab label="Contact" />
+                </Link>
               </Tabs>
               <Link to="/login">
                 <Button sx={{ marginLeft: "auto" }} variant="contained">
