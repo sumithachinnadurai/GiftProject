@@ -30,7 +30,6 @@ const SignUp2 = () => {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        //backgroundColor: "teal",
         backgroundImage:
           "url('https://img.freepik.com/free-photo/top-view-gifts-with-string-tags_23-2148370124.jpg?t=st=1700475838~exp=1700476438~hmac=8ac05c000006ebdda29172bba98f21221150b098bdb6c8a2a99c9b7833a2db2d ')", // Replace with your image URL
         backgroundSize: "cover",

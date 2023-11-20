@@ -22,7 +22,7 @@ const Front = () => {
         left: 0,
         right: 0,
         bottom: 0,
-        overflow: "hidden", // Ensure the background covers the entire viewport
+        overflow: "hidden",
       }}
     >
       <Container

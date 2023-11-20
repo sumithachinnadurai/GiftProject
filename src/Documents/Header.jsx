@@ -12,11 +12,10 @@ import {
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [value, setValue] = useState(0); // Initialize value state
+  const [value, setValue] = useState(0);
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
-  // Map the pages to their corresponding index in the Tabs
   const pageToTabIndex = {
     Products: 0,
     Services: 1,
@@ -24,7 +23,6 @@ const Header = () => {
     ContactUs: 3,
   };
 
-  // Map the index in Tabs to the corresponding page
   const tabIndexToPage = {
     0: "Products",
     1: "Services",
@@ -43,7 +41,7 @@ const Header = () => {
           <img src="/logo192.png" alt="" width="50px" />
           {isMatch ? (
             <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
-              Shoppee
+              FAV SHOP
             </Typography>
           ) : (
             <>
@@ -82,12 +80,10 @@ const Header = () => {
         </Toolbar>
       </AppBar>
       {!isMatch && (
-        /* Render content based on the selected page */
         <div style={{ padding: "20px" }}>
           <Typography variant="h4">
             {`Content for ${tabIndexToPage[value]} page`}
           </Typography>
-          {/* Add your page-specific content here */}
         </div>
       )}
     </React.Fragment>
