@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import { Typography, Box } from "@mui/material";
+import { Typography } from "@mui/material";
 function Footer() {
   return (
     <div className="main-footer" id="main">

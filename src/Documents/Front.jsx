@@ -34,7 +34,7 @@ const Front = () => {
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          zIndex: 1,
+          zIndex: 1, //element appears on top of elements with lower values
           color: "white",
         }}
       >
@@ -61,7 +61,7 @@ const Front = () => {
             variant="contained"
             color="primary"
             fullWidth
-            onClick={handleSignUp}
+            onClick={handleSignUp} //instead of uing direct user interaction done using code
             style={{ marginTop: "8px" }}
           >
             Sign Up

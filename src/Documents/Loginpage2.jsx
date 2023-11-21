@@ -8,6 +8,7 @@ const Loginpage2 = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
+    //demonstration purpose
     console.log(`Logging in with email: ${email} and password: ${password}`);
     navigate("/home");
   };
