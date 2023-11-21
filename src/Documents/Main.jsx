@@ -44,7 +44,7 @@ import React, { useState } from "react";
 const Main = () => {
   const mainStyle = {
     backgroundImage:
-      "url('https://img.freepik.com/free-photo/detailed-red-grunge-background-with-scratches-stains_1048-6467.jpg?size=626&ext=jpg&ga=GA1.1.1515574406.1700475824&semt=ais')",
+      "url(' https://img.freepik.com/free-photo/detailed-red-grunge-background-with-scratches-stains_1048-6467.jpg?size=626&ext=jpg&ga=GA1.1.1515574406.1700475824&semt=ais  ')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     color: "White",
