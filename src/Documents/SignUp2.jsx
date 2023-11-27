@@ -1,116 +1,4 @@
-// import { useState } from "react";
-// import { Container, Typography, Paper, TextField, Button } from "@mui/material";
-// import { Link, useNavigate } from "react-router-dom";
-
-// const SignUp2 = () => {
-//   const navigate = useNavigate(); //  returns a function
-
-//   const [firstName, setFirstName] = useState("");
-//   const [lastName, setLastName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [confirmPassword, setConfirmPassword] = useState("");
-
-//   const handleSignUp = () => {
-//     console.log("Signing up with the following details:");
-//     console.log("First Name:", firstName);
-//     console.log("Last Name:", lastName);
-//     console.log("Email:", email);
-//     console.log("Password:", password);
-//     console.log("Confirm Password:", confirmPassword);
-//     // navigate("/login");
-//     // navigate("/home");
-//   };
-
-//   return (
-//     <Container
-//       maxWidth="100%"
-//       style={{
-//         display: "flex",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         height: "100vh",
-//         backgroundImage:
-//           "url('https://img.freepik.com/free-photo/christmas-gifts_144627-39250.jpg?size=626&ext=jpg&ga=GA1.1.1515574406.1700475824&semt=ais')", // Replace with your image URL
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//       }}
-//     >
-//       <Paper
-//         elevation={8}
-//         style={{
-//           padding: "20px",
-//           width: "700px",
-//         }}
-//       >
-//         <Typography variant="h5" align="center">
-//           Sign Up
-//         </Typography>
-
-//         <form>
-//           <TextField
-//             label="First Name"
-//             variant="outlined"
-//             fullWidth
-//             margin="normal"
-//             value={firstName}
-//             onChange={(e) => setFirstName(e.target.value)}
-//           />
-//           <TextField
-//             label="Last Name"
-//             variant="outlined"
-//             fullWidth
-//             margin="normal"
-//             value={lastName}
-//             onChange={(e) => setLastName(e.target.value)}
-//           />
-//           <TextField
-//             label="Email"
-//             variant="outlined"
-//             fullWidth
-//             margin="normal"
-//             value={email}
-//             onChange={(e) => setEmail(e.target.value)}
-//           />
-//           <TextField
-//             label="Password"
-//             type="password"
-//             variant="outlined"
-//             fullWidth
-//             margin="normal"
-//             value={password}
-//             onChange={(e) => setPassword(e.target.value)}
-//           />
-//           <TextField
-//             label="Confirm Password"
-//             type="password"
-//             variant="outlined"
-//             fullWidth
-//             margin="normal"
-//             value={confirmPassword}
-//             onChange={(e) => setConfirmPassword(e.target.value)}
-//           />{" "}
-//           <Link to="/signup">
-//             <Button
-//               variant="contained"
-//               color="primary"
-//               fullWidth
-//               style={{ marginTop: "20px" }}
-//               onClick={handleSignUp}
-//             >
-//               Sign Up
-//             </Button>
-//           </Link>
-//           <Typography sx={{ marginTop: "16px" }}>
-//             Already a user ? <Link to="/login">Login</Link>
-//           </Typography>
-//         </form>
-//       </Paper>
-//     </Container>
-//   );
-// };
-
-// export default SignUp2;
+/*
 import { useState } from "react";
 import { Container, Typography, Paper, TextField, Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
@@ -215,6 +103,117 @@ const SignUp2 = () => {
           <Typography sx={{ marginTop: "16px" }}>
             Already a user ? <Link to="/login">Login</Link>
           </Typography>
+        </form>
+      </Paper>
+    </Container>
+  );
+};
+
+export default SignUp2;
+*/
+import { useState } from "react";
+import { Container, Typography, Paper, TextField, Button } from "@mui/material";
+import { Link, useNavigate } from "react-router-dom";
+
+const SignUp2 = () => {
+  const navigate = useNavigate();
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
+  const handleSignUp = () => {
+    // Password validation
+    if (password.length < 8) {
+      setPasswordError("Password must be at least 8 characters long.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setPasswordError("Passwords do not match.");
+      return;
+    }
+
+    // If validation passes, proceed with signup
+    console.log("Signing up with the following details:");
+    console.log("First Name:", firstName);
+    console.log("Last Name:", lastName);
+    console.log("Email:", email);
+    console.log("Password:", password);
+    console.log("Confirm Password:", confirmPassword);
+    
+    // Reset password error state
+    setPasswordError("");
+
+    // Navigate to the desired page
+    navigate("/home");
+  };
+
+  return (
+    <Container
+      maxWidth="100%"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        backgroundImage:
+          "url('https://img.freepik.com/free-photo/christmas-gifts_144627-39250.jpg?size=626&ext=jpg&ga=GA1.1.1515574406.1700475824&semt=ais')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <Paper
+        elevation={8}
+        style={{
+          padding: "20px",
+          width: "700px",
+        }}
+      >
+        <Typography variant="h5" align="center">
+          Sign Up
+        </Typography>
+
+        <form>
+          {/* ... (existing code) */}
+
+          <TextField
+            label="Password"
+            type="password"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            error={passwordError !== ""}
+            helperText={passwordError}
+          />
+          <TextField
+            label="Confirm Password"
+            type="password"
+            variant="outlined"
+            fullWidth
+            margin="normal"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            error={passwordError !== ""}
+            helperText={passwordError}
+          />
+
+          <Button
+            variant="contained"
+            color="primary"
+            fullWidth
+            style={{ marginTop: "20px" }}
+            onClick={handleSignUp}
+          >
+            Sign Up
+          </Button>
+
+          {/* ... (existing code) */}
         </form>
       </Paper>
     </Container>
