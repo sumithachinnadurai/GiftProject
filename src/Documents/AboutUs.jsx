@@ -3,7 +3,7 @@ import React from "react";
 const AboutUs = () => {
   const containerStyle = {
     backgroundImage:
-      "url('https://img.freepik.com/free-vector/cement-wall-texture-background_53876-91519.jpg?size=626&ext=jpg&ga=GA1.1.1515574406.1700475824&semt=aiso')",
+      "url('https://img.freepik.com/free-photo/dark-blue-wall-shadow-background-with-flower_53876-105707.jpg?size=626&ext=jpg&ga=GA1.1.1515574406.1700475824&semt=ais')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     color: "White",
