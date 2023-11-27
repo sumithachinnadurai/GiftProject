@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Light gray background */
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
+    padding: 20px; /* Added padding for spacing */
+  }
+  
+  .title {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem; /* Adjusted font size */
+    color: darkblue;
+    margin-bottom: 10px; /* Added margin for spacing */
+  }
+  
+  .value {
+    text-align: center;
+    font-style: italic;
+  }
+  
+  .cart {
+    background-color: #333; /* Dark background color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .cart:hover {
+    background-color: #555; /* Darker background color on hover */
+  }
+  
+  .stock {
+    font-style: italic;
+  }
+  
+  .t {
+    background-color: #333; /* Dark background color */
+    padding: 50px;
+    text-align: center;
+    color: white;
+  }
+  
+  .purch {
+    margin-left: 50px;
+    color: black;
+    background-color: #f0f8ff; /* Light blue background color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
