@@ -6,7 +6,7 @@ const AboutUs = () => {
       "url('https://img.freepik.com/free-vector/cement-wall-texture-background_53876-91519.jpg?size=626&ext=jpg&ga=GA1.1.1515574406.1700475824&semt=aiso')",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    color: "black",
+    color: "White",
     padding: "20px",
     height: "100vh",
     display: "flex",
